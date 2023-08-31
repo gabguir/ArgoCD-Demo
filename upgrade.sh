@@ -8,7 +8,7 @@ new_ver=$1
 echo "new version: $new_ver"
 
 # Simulate release of the new docker images
-docker tag nginx:1.23.3 gabrielguir/nginx:$new_ver
+docker tag nginx:1.23.4 gabrielguir/nginx:$new_ver
 
 # Push new version to dockerhub
 docker push gabrielguir/nginx:$new_ver
@@ -18,7 +18,7 @@ tmp_dir=$(mktemp -d)
 echo $tmp_dir
 
 # Clone GitHub repo
-git clone git@github.com/gabguir/ArgoCD-Demo.git $tmp_dir
+git clone https://github.com/gabguir/ArgoCD-Demo.git $tmp_dir
 
 # Update image tag
 sed -i '' -e "s/gabrielguir\/nginx:.*/gabrielguir\/nginx:$new_ver/g" $tmp_dir/ArgoCD-local/my-app/1-deployment.yaml
