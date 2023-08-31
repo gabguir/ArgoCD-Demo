@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/gabguir/ArgoCD-Demo.git
     targetRevision: HEAD
-    path: environments/staging/apps/my-app
+    path: environments/staging/my-app
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
