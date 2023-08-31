@@ -19,7 +19,7 @@ spec:
       containers:
         - name: nginx
           imagePullPolicy: Always
-          image: gabrielguir/nginx:v0.1.1
+          image: gabrielguir/nginx:v.0.1.2
           ports:
             - containerPort: 80
       imagePullSecrets:
