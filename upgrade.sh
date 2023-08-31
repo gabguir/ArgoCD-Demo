@@ -29,5 +29,5 @@ git add .
 git commit -m "Update image to $new_ver"
 git push
 
-# Optionally on build agents - remove folder !
+# Optionally on build agents - remove folder
 rm -rf $tmp_dir
